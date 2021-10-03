@@ -45,7 +45,7 @@ public class fillWithMove : MonoBehaviour
         }
     }
 
-    public void FillSprite(float f){ //used to update the meter level from other classes/scripts
+    public void FillSprite(float f){
         _image.fillAmount = f;
     }
 }
