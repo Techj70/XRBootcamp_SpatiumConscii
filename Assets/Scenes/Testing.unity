@@ -426,13 +426,14 @@ GameObject:
   - component: {fileID: 134771485}
   - component: {fileID: 134771484}
   - component: {fileID: 134771483}
+  - component: {fileID: 134771487}
   - component: {fileID: 134771486}
   - component: {fileID: 134771479}
   - component: {fileID: 134771482}
   - component: {fileID: 134771481}
   - component: {fileID: 134771480}
   m_Layer: 0
-  m_Name: Prism (1)
+  m_Name: PrismTall
   m_TagString: Puzzle_3DShape
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -823,11 +824,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134771478}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df2ab3a4228eda8488a614038ec76aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &134771487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134771478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5d61f91ce3ef429d6eb37e687c0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shapeName: PrismTall
 --- !u!1 &190355813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1140,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22654
+  m_Name: pb_Mesh22698
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1582,7 +1596,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22344
+  m_Name: pb_Mesh22380
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3285,13 +3299,14 @@ GameObject:
   - component: {fileID: 943637725}
   - component: {fileID: 943637724}
   - component: {fileID: 943637723}
+  - component: {fileID: 943637727}
   - component: {fileID: 943637726}
   - component: {fileID: 943637719}
   - component: {fileID: 943637722}
   - component: {fileID: 943637721}
   - component: {fileID: 943637720}
   m_Layer: 0
-  m_Name: Prism (3)
+  m_Name: Pyramid
   m_TagString: Puzzle_3DShape
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3675,11 +3690,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943637718}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35fddf07de6a69040846db959fd43989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &943637727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943637718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5d61f91ce3ef429d6eb37e687c0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shapeName: Pyramid
 --- !u!1 &1031898316
 GameObject:
   m_ObjectHideFlags: 0
@@ -4288,9 +4316,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1405760043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9ae514a388f7fb42b01b8a27902b6bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 64b5d61f91ce3ef429d6eb37e687c0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shapeName: Cube
 --- !u!1 &1410992326
 GameObject:
   m_ObjectHideFlags: 0
@@ -4594,6 +4623,7 @@ GameObject:
   - component: {fileID: 1517083143}
   - component: {fileID: 1517083142}
   - component: {fileID: 1517083141}
+  - component: {fileID: 1517083145}
   - component: {fileID: 1517083144}
   - component: {fileID: 1517083138}
   - component: {fileID: 1517083140}
@@ -4811,11 +4841,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517083137}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff0a07b6cd235064e8a953d81c670ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1517083145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517083137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5d61f91ce3ef429d6eb37e687c0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shapeName: RectSolid
 --- !u!1 &1528037563
 GameObject:
   m_ObjectHideFlags: 0
@@ -5119,13 +5162,14 @@ GameObject:
   - component: {fileID: 1549431680}
   - component: {fileID: 1549431679}
   - component: {fileID: 1549431678}
+  - component: {fileID: 1549431682}
   - component: {fileID: 1549431681}
   - component: {fileID: 1549431674}
   - component: {fileID: 1549431677}
   - component: {fileID: 1549431676}
   - component: {fileID: 1549431675}
   m_Layer: 0
-  m_Name: Prism (2)
+  m_Name: PrismLong
   m_TagString: Puzzle_3DShape
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5516,11 +5560,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549431673}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f6332f5fde4f294b8c8593bed5846f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1549431682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549431673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5d61f91ce3ef429d6eb37e687c0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shapeName: PrismLong
 --- !u!1 &1658441771
 GameObject:
   m_ObjectHideFlags: 0
@@ -6275,6 +6332,7 @@ GameObject:
   - component: {fileID: 1804467668}
   - component: {fileID: 1804467671}
   - component: {fileID: 1804467670}
+  - component: {fileID: 1804467676}
   - component: {fileID: 1804467675}
   - component: {fileID: 1804467669}
   - component: {fileID: 1804467674}
@@ -6506,18 +6564,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804467667}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 543abc8c3c1523948ae3fdcf183a18a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1804467676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804467667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5d61f91ce3ef429d6eb37e687c0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shapeName: Sphere
 --- !u!43 &1840343310
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22512
+  m_Name: pb_Mesh22564
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7374,6 +7445,7 @@ GameObject:
   - component: {fileID: 2085352355}
   - component: {fileID: 2085352358}
   - component: {fileID: 2085352357}
+  - component: {fileID: 2085352362}
   - component: {fileID: 2085352361}
   - component: {fileID: 2085352356}
   - component: {fileID: 2085352360}
@@ -7592,11 +7664,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085352354}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e5953b2c4717ce4d82890217803aef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2085352362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085352354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5d61f91ce3ef429d6eb37e687c0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shapeName: Cylinder
 --- !u!1 &2110320353
 GameObject:
   m_ObjectHideFlags: 0
@@ -7813,4 +7898,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ccec42fc988ac84cbfbfd794777844d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  socketInteractor: {fileID: 0}
+  socket:
+  - {fileID: 0}
+  - {fileID: 1662360082}
+  - {fileID: 1939578980}
+  - {fileID: 1766363901}
+  - {fileID: 805934371}
+  - {fileID: 2110320355}
+  - {fileID: 1476973790}
+  - {fileID: 1539431084}
+  - {fileID: 1959870785}
+  - {fileID: 755708597}
+  - {fileID: 1031898318}
+  - {fileID: 925271042}
+  - {fileID: 1889077694}
+  - {fileID: 54088572}
+  - {fileID: 1658441773}
+  - {fileID: 1410992328}
+  - {fileID: 2036541487}
+  - {fileID: 249543648}
+  - {fileID: 548349802}
+  - {fileID: 1528037565}
+  - {fileID: 1770232533}
+  - {fileID: 190355815}
+  - {fileID: 343554315}
+  - {fileID: 796989600}
+  - {fileID: 1679426721}
+  - {fileID: 1195735285}
+  - {fileID: 313628009}
+  - {fileID: 62453154}
+  code:
+  - null
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  socketedShape: {fileID: 0}
