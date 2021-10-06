@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class XRSocketInteractorTag : XRSocketInteractor
 {
     public string targetTag;
-    public int socketNumber; 
+    //public int socketNumber; 
 
     public override bool CanSelect(XRBaseInteractable interactable)
     {
