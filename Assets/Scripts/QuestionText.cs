@@ -7,8 +7,11 @@ using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 using Random = System.Random;
 
-public class QuestionText : MonoBehaviour {
-
+public class QuestionText : MonoBehaviour
+{
+	
+private GameObject _questionCanvasRef;
+	
 private static Text _text;
 private static string[] _operator;
 private static string[] _firstNumber;
@@ -25,7 +28,7 @@ public static int Button3Value;
 private static int[] iFirstNumbers;
 private static int[] iSecondNumbers;
 //private static int[] iOperators;
-private static int solution;
+public static int solution = 0;
 
 // Use this for initialization
 	void Start () {
@@ -56,64 +59,83 @@ private static int solution;
 			i++;
 		}
 		
+		_questionCanvasRef = GameObject.FindGameObjectWithTag("Question_PopUp");
+		Debug.Log(_questionCanvasRef.name + "found by tag");
+		
 		//iOperators[0] = 1;
 		//iOperators[1] = 2;
 		//iOperators[2] = 3;
-
 		GenerateQuestion();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-
+	void Update ()
+	{
 	}
 
-	public void GenerateQuestion()
+	public static void GenerateQuestion()
 	{
 		Debug.Log("GenerateQuestion called");
 		
 		var x = UnityEngine.Random.Range(0, 9);
 		var y = UnityEngine.Random.Range(0, 3);
 		var z = UnityEngine.Random.Range(0, 9);
-		var b = UnityEngine.Random.Range(0, 3);
+		
+		var a = UnityEngine.Random.Range(0, 3);
+		var b = UnityEngine.Random.Range(1, 4);
+		var c = UnityEngine.Random.Range(1, 4);
+		var d = UnityEngine.Random.Range(1, 4);
 
-		solution = y switch
+		switch (y)
 		{
-			0 => iFirstNumbers[x] + iSecondNumbers[z],
-			1 => iFirstNumbers[x] - iSecondNumbers[z],
-			2 => iFirstNumbers[x] * iSecondNumbers[z],
-			_ => solution
+			case 0:
+				solution = iFirstNumbers[x] + iSecondNumbers[z];
+				break;
+			case 1:
+				solution = iFirstNumbers[x] - iSecondNumbers[z];
+				break;
+			case 2:
+				solution = iFirstNumbers[x] * iSecondNumbers[z];
+				break;
 		};
 
-		switch (b)
+		switch (a)
 		{
 			case 0 :
 				SetButton1(solution);
-				SetButton2(solution+x);
-				SetButton3(solution+z);
+				SetButton2(solution+b+1);
+				if (solution+b+1 == solution+c)
+					SetButton3(solution+c+2);
+				else
+					SetButton3(solution+c);
 				break;
 			case 1 :
 				SetButton2(solution);
-				SetButton1(solution+x);
-				SetButton3(solution+z);
+				SetButton3(solution+c+1);
+				if (solution+c+1 == solution+d)
+					SetButton1(solution+d+2);
+				else
+					SetButton1(solution+d);
 				break;
 			case 2 :
 				SetButton3(solution);
-				SetButton1(solution+x);
-				SetButton2(solution+z);
+				SetButton1(solution+d+1);
+				if (solution+d+1 == solution+b)
+					SetButton2(solution+b+2);
+				else
+					SetButton2(solution+b);
 				break;
 				
 		}
 
-		_text.text = "What is " + _firstNumber[x] + _operator[y] + _secondNumber[z] + " ?";
+		_text.text = "What is " + _firstNumber[x] + " " + _operator[y] + " " + _secondNumber[z] + " ?";
 	}
 
 	public static void SetButton1(int answer)
 	{
 		Debug.Log("button 1 text and value set to " + answer.ToString());
 		Button1Text = answer.ToString();
-		Button3Value = answer;
+		Button1Value = answer;
 	}
 	
 	public static void SetButton2(int answer)
@@ -130,4 +152,46 @@ private static int solution;
 		Button3Value = answer;
 	}
 	
+	public void PressedButton1()
+	{
+		Debug.Log("button 1 pressed");
+		if (Button1Value == solution)
+		{
+			Debug.Log("correct answer");
+			Destroy(_questionCanvasRef);
+		}
+		else
+		{
+			Debug.Log("incorrect answer");
+		}
+	}
+    
+	public void PressedButton2()
+	{
+		Debug.Log("button 2 pressed");
+		if (Button2Value == solution)
+		{
+			Debug.Log("correct answer");
+			Destroy(_questionCanvasRef);
+		}
+		else
+		{
+			Debug.Log("incorrect answer");
+		}
+	}
+    
+	public void PressedButton3()
+	{
+		Debug.Log("button 3 pressed");
+		if (Button3Value == solution)
+		{
+			Debug.Log("correct answer");
+			Destroy(_questionCanvasRef);
+		}
+		else
+		{
+			Debug.Log("incorrect answer");
+		}
+	}
+
 }

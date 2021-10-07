@@ -26,7 +26,7 @@ public class Shape3DPuzzle : MonoBehaviour
 
     public Shape3D socketedShape;
     public string codeSolutionString; //the codeSolution array made into one string variable
-    public int moveCounter;
+    public static int moveCounter;
 
     private void Start()
     {
