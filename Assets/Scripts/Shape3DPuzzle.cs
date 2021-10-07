@@ -13,7 +13,7 @@ public class Shape3DPuzzle : MonoBehaviour
     private int arrayX = 1; //used to start array at 1 for easy of use with socket numbers in the editor
     private int i = 1;
     private int socketNumber = 0;
-    
+
     public bool codeCorrect;
 
     [SerializeField] public XRSocketInteractor[] socket;
@@ -28,6 +28,8 @@ public class Shape3DPuzzle : MonoBehaviour
     public string codeSolutionString; //the codeSolution array made into one string variable
     public static int moveCounter;
 
+    [SerializeField] public GameObject PuzzleCompleteCanvasPrefab;
+    
     private void Start()
     {
     }
@@ -142,9 +144,13 @@ public class Shape3DPuzzle : MonoBehaviour
         }
 
         //Debug.Log("current code is ");
-        
+
         if (CheckSolution() == true)
-        { Debug.Log("puzzle solved!"); }
+        {
+            Debug.Log("puzzle solved!");
+            Instantiate(PuzzleCompleteCanvasPrefab);
+            Time.timeScale = 0;
+        }
         else
         { Debug.Log("puzzle not solved"); }
     }
